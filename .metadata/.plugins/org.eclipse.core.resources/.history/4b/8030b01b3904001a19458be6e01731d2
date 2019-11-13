@@ -1,0 +1,41 @@
+package com.ibm.training;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	UserRepository repo;
+
+	Iterable<UserM> getAllUsers(){
+		return repo.findAll();
+	}
+
+//	Add a new user
+	public void addUser(UserM user) {
+		repo.save(user);
+		
+	}
+
+	public Optional<UserM> getUser(Integer id) {
+		return repo.findById(id);
+	}
+
+	public void updateUser(UserM user, Integer id) {
+		
+		repo.save(user);
+		
+	}
+
+	public void deleteUser(Integer id) {
+		repo.deleteById(id);
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,4 @@
+server.port=8086
+
+zuul.routes.calendarRestApi.url=http://localhost:8080
+

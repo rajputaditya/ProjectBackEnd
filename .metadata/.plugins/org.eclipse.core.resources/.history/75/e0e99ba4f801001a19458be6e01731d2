@@ -1,0 +1,6 @@
+package com.ibm.training.dao;
+
+
+public interface EventRepository extends Crud {
+
+}

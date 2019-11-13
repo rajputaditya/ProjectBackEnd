@@ -1,0 +1,12 @@
+package com.ibm.training.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EventService {
+
+	public String getEvents() {
+		return "";
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.ibm.training.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ibm.training.dao.EventRepository;
+
+@Service
+public class EventService {
+
+	@Autowired
+	EventRepository eventRepository;
+	
+	public String getEvents() {
+		return eventRepositary.findAll();
+	}
+
+}

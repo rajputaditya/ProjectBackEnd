@@ -1,0 +1,5 @@
+package com.ibm.training.dao;
+
+public class EventRepository {
+
+}

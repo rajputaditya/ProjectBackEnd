@@ -1,0 +1,21 @@
+package com.ibm.training.bean;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Event {
+	String title, start;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	int id;
+	
+	public Event() {
+		
+	}
+	
+	
+	
+}

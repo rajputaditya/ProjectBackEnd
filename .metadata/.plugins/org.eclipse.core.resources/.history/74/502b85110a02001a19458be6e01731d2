@@ -1,0 +1,26 @@
+package com.ibm.training;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ibm.training.bean.Event;
+import com.ibm.training.service.EventService;
+
+@RestController
+public class EventsController {
+
+	@Autowired
+	EventService eventService;
+	
+	@RequestMapping("/events")
+	Iterable<Event> getEvents() {
+		return eventService.getEvents();
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/events}")
+	void saveEvent(String title, String date){
+		eventService.saveEvent(title, date);
+	}
+}

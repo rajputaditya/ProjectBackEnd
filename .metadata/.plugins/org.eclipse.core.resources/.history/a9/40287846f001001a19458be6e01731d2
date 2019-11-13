@@ -1,0 +1,5 @@
+package com.ibm.training.bean;
+
+public class Event {
+	String title, date;
+}
