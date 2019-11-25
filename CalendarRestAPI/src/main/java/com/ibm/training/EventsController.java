@@ -30,11 +30,13 @@ public class EventsController {
 		return eventService.getEvents();
 	}
 	
+	@ApiOperation(value = "Save Events" , notes = "hit this url to save events",response = List.class)
 	@RequestMapping(method = RequestMethod.POST, value = "events")
 	void saveEvent(@RequestBody AnEvent event){
 		eventService.saveEvent(event);
 	}
 	
+	@ApiOperation(value = "Delete Events" , notes = "hit this url to delete events",response = List.class)
 	@RequestMapping(method = RequestMethod.DELETE, value = "events/{id}")
 	void deleteEvent(@PathVariable Integer id){
 		eventService.deleteEvent(id);
