@@ -29,18 +29,19 @@ public class CalendarRestApiApplication {
 	Docket configureSwagger() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.paths(PathSelectors.ant("/app/**"))
+				.paths(PathSelectors.any())
 				.build()
 				
 				.apiInfo(new ApiInfo("User API Documentation", 
 						"API for Event Details", 
 						"1.0.0",
 						"Free for users to learn",
-						new Contact("Jaspreet", "www.learnjava.com", "priyanka@gmail.com"),
+						new Contact("Ankush Kansal", "www.learnjava.com", "ankushkansal14@gmail.com"),
 						"Free",
 						"www.somecode.com",
 						Collections.emptyList()));
 	}
+
 	
 
 }

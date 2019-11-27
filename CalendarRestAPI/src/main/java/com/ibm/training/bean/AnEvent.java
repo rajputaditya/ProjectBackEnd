@@ -1,19 +1,25 @@
 package com.ibm.training.bean;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiOperation;
 
-@Entity
 @ApiModel
+@Entity
+
 public class AnEvent {
 	String title;
 
 	String start;
 
+	@ApiModelProperty(value = "it is a proimary key")
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
